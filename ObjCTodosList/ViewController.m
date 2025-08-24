@@ -3,9 +3,10 @@
 //  ObjCTodosList
 //
 //  Created by Michael on 16.08.25.
-//
+// Tutorials: https://www.youtube.com/watch?v=7_QlA7QchW0&list=PLSyUY9cUrmowl_1B_T1Jlo_zJAhbTyS1F
 
 #import "ViewController.h"
+#import "DetailsViewController.h"
 
 @interface ViewController () <UIAlertViewDelegate> {
 	NSMutableArray *todos;
@@ -55,6 +56,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[self performSegueWithIdentifier:@"goToDetails" sender:self];
+} // https://www.youtube.com/watch?v=_atSTzQQbgg
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"goToDetails"]) {
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+		DetailsViewController *details = (DetailsViewController *)segue.destinationViewController ;
+		details.todoText = todos[indexPath.row];
+	}
 }
 
 @end

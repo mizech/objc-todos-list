@@ -59,7 +59,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0r-vG-o3P">
-                                <rect key="frame" x="25" y="242" width="393" height="39"/>
+                                <rect key="frame" x="25" y="202" width="343" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-pw-Md9">
+                                <rect key="frame" x="25" y="253" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2Si-9J-Cko"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,16 +77,22 @@
                         <viewLayoutGuide key="safeArea" id="Mmv-ns-UVN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="M0r-vG-o3P" firstAttribute="top" secondItem="Mmv-ns-UVN" secondAttribute="top" constant="80" id="KQ1-Fr-Wd5"/>
-                            <constraint firstItem="M0r-vG-o3P" firstAttribute="trailing" secondItem="Mmv-ns-UVN" secondAttribute="trailing" constant="25" id="Uyw-eI-HEL"/>
-                            <constraint firstItem="M0r-vG-o3P" firstAttribute="leading" secondItem="Mmv-ns-UVN" secondAttribute="leading" constant="25" id="dWu-80-3gM"/>
+                            <constraint firstItem="Mmv-ns-UVN" firstAttribute="trailing" secondItem="nvb-pw-Md9" secondAttribute="trailing" constant="25" id="ZV8-y5-Aqo"/>
+                            <constraint firstItem="nvb-pw-Md9" firstAttribute="top" secondItem="M0r-vG-o3P" secondAttribute="bottom" constant="8" id="cJY-W7-kWP"/>
+                            <constraint firstItem="M0r-vG-o3P" firstAttribute="top" secondItem="Mmv-ns-UVN" secondAttribute="top" constant="40" id="ku0-rq-WOJ"/>
+                            <constraint firstItem="M0r-vG-o3P" firstAttribute="leading" secondItem="Mmv-ns-UVN" secondAttribute="leading" constant="25" id="sqE-cg-bb0"/>
+                            <constraint firstItem="Mmv-ns-UVN" firstAttribute="trailing" secondItem="M0r-vG-o3P" secondAttribute="trailing" constant="25" id="t8W-Ob-KNj"/>
+                            <constraint firstItem="nvb-pw-Md9" firstAttribute="leading" secondItem="Mmv-ns-UVN" secondAttribute="leading" constant="25" id="yzH-YF-Uv6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VFR-cc-WKs"/>
+                    <connections>
+                        <outlet property="todoLabel" destination="nvb-pw-Md9" id="Ay3-Aw-QCa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlK-SY-V7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034" y="16"/>
+            <point key="canvasLocation" x="2032.824427480916" y="15.492957746478874"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1SD-Vs-Rb7">
