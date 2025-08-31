@@ -4,9 +4,12 @@
 //
 //  Created by Michael on 16.08.25.
 // Tutorials: https://www.youtube.com/watch?v=7_QlA7QchW0&list=PLSyUY9cUrmowl_1B_T1Jlo_zJAhbTyS1F
+// https://www.youtube.com/@polyglotengineer/videos
+// Class Creation: https://www.youtube.com/watch?v=tN8DFj2fB2g
 
 #import "ViewController.h"
 #import "DetailsViewController.h"
+#import "Todo.h";
 
 @interface ViewController () <UIAlertViewDelegate> {
 	NSMutableArray *todos;
@@ -35,7 +38,10 @@
 	}];
 	UIAlertAction *insertButton = [UIAlertAction actionWithTitle:@"Insert" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 		NSString *todoTitle = alert.textFields[0].text;
-		[todos addObject:todoTitle];
+		Todo *todo = [[Todo alloc] init];
+		todo.title = todoTitle;
+		todo.text = @"Placeholder-text";
+		[todos addObject:todo];
 		[self.tableView reloadData];
 	}];
 	[alert addAction:insertButton];
@@ -50,18 +56,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell"];
-	cell.textLabel.text = todos[indexPath.row];
+	Todo *todo = (Todo *)todos[indexPath.row];
+	cell.textLabel.text = todo.title;
 	return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[self performSegueWithIdentifier:@"goToDetails" sender:self];
-} // https://www.youtube.com/watch?v=_atSTzQQbgg
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	if ([segue.identifier isEqualToString:@"goToDetails"]) {
 		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-		DetailsViewController *details = (DetailsViewController *)segue.destinationViewController ;
+		DetailsViewController *details = (DetailsViewController *)segue.destinationViewController;
 		details.todoText = todos[indexPath.row];
 	}
 }
