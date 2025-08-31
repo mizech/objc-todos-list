@@ -70,8 +70,8 @@
 		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 		DetailsViewController *details = (DetailsViewController *)segue.destinationViewController;
 		Todo *todo = (Todo *)todos[indexPath.row];
-		details.todoText = todo.title;
-		details.todoText2 = todo.text;
+		details.todoTitle = todo.title;
+		details.todoText = todo.text;
 	}
 }
 

@@ -15,8 +15,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	todoLabel.text = _todoText;
-	textLabel.text = _todoText2;
+	titleLabel.text = _todoTitle;
+	textLabel.text = _todoText;
 }
 
 @end

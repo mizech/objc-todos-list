@@ -100,7 +100,7 @@
                     <navigationItem key="navigationItem" id="VFR-cc-WKs"/>
                     <connections>
                         <outlet property="textLabel" destination="EMH-bs-feI" id="PEh-T2-MtC"/>
-                        <outlet property="todoLabel" destination="nvb-pw-Md9" id="Ay3-Aw-QCa"/>
+                        <outlet property="titleLabel" destination="nvb-pw-Md9" id="Ay3-Aw-QCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlK-SY-V7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
