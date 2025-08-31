@@ -69,7 +69,8 @@
 	if ([segue.identifier isEqualToString:@"goToDetails"]) {
 		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 		DetailsViewController *details = (DetailsViewController *)segue.destinationViewController;
-		details.todoText = todos[indexPath.row];
+		Todo *todo = (Todo *)todos[indexPath.row];
+		details.todoText = todo.title;
 	}
 }
 
