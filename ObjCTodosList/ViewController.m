@@ -71,6 +71,7 @@
 		DetailsViewController *details = (DetailsViewController *)segue.destinationViewController;
 		Todo *todo = (Todo *)todos[indexPath.row];
 		details.todoText = todo.title;
+		details.todoText2 = todo.text;
 	}
 }
 
