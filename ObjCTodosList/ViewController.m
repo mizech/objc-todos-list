@@ -36,11 +36,19 @@
 		textField.placeholder = @"Enter Todo-title";
 		textField.clearButtonMode = UITextFieldViewModeWhileEditing;
 	}];
+	[alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+		textField.placeholder = @"Enter Todo-text";
+		textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+	}];
+	
 	UIAlertAction *insertButton = [UIAlertAction actionWithTitle:@"Insert" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 		NSString *todoTitle = alert.textFields[0].text;
+		NSString *todoText = alert.textFields[1].text;
+		
 		Todo *todo = [[Todo alloc] init];
 		todo.title = todoTitle;
-		todo.text = @"Placeholder-text";
+		todo.text = todoText;
+		
 		[todos addObject:todo];
 		[self.tableView reloadData];
 	}];
