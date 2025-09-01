@@ -1,12 +1,3 @@
-//
-//  ViewController.m
-//  ObjCTodosList
-//
-//  Created by Michael on 16.08.25.
-// Tutorials: https://www.youtube.com/watch?v=7_QlA7QchW0&list=PLSyUY9cUrmowl_1B_T1Jlo_zJAhbTyS1F
-// https://www.youtube.com/@polyglotengineer/videos
-// Class Creation: https://www.youtube.com/watch?v=tN8DFj2fB2g
-
 #import "ViewController.h"
 #import "DetailsViewController.h"
 #import "Todo.h";
