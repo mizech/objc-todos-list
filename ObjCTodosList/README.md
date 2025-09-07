@@ -7,3 +7,6 @@ https://www.youtube.com/@polyglotengineer/videos
 The Mountain Dispatch
 https://www.youtube.com/watch?v=sDwFNkb8wuA
 
+Todo:
+Swipe to delete
+
