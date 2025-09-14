@@ -46,8 +46,8 @@
             filePath = "ObjCTodosList/DetailsViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
