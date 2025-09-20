@@ -82,16 +82,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dX-lb-vOy">
+                                <rect key="frame" x="25" y="435" width="343" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Edit"/>
+                                <connections>
+                                    <action selector="editButtonTouched:" destination="8cI-Qq-nh7" eventType="touchUpInside" id="1FW-OX-KFx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mmv-ns-UVN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Mmv-ns-UVN" firstAttribute="trailing" secondItem="8dX-lb-vOy" secondAttribute="trailing" constant="25" id="13W-MQ-yNu"/>
                             <constraint firstItem="EMH-bs-feI" firstAttribute="leading" secondItem="Mmv-ns-UVN" secondAttribute="leading" constant="25" id="JJg-CG-xNI"/>
+                            <constraint firstItem="8dX-lb-vOy" firstAttribute="leading" secondItem="Mmv-ns-UVN" secondAttribute="leading" constant="25" id="Oq0-wK-iEm"/>
                             <constraint firstItem="Mmv-ns-UVN" firstAttribute="trailing" secondItem="EMH-bs-feI" secondAttribute="trailing" constant="25" id="SVf-qf-6Kr"/>
                             <constraint firstItem="EMH-bs-feI" firstAttribute="top" secondItem="nvb-pw-Md9" secondAttribute="bottom" constant="25" id="V5M-Do-9lB"/>
                             <constraint firstItem="Mmv-ns-UVN" firstAttribute="trailing" secondItem="nvb-pw-Md9" secondAttribute="trailing" constant="25" id="ZV8-y5-Aqo"/>
                             <constraint firstItem="nvb-pw-Md9" firstAttribute="top" secondItem="M0r-vG-o3P" secondAttribute="bottom" constant="25" id="cJY-W7-kWP"/>
+                            <constraint firstItem="8dX-lb-vOy" firstAttribute="top" secondItem="EMH-bs-feI" secondAttribute="bottom" constant="60" id="f3n-U0-CC7"/>
                             <constraint firstItem="M0r-vG-o3P" firstAttribute="top" secondItem="Mmv-ns-UVN" secondAttribute="top" constant="40" id="ku0-rq-WOJ"/>
+                            <constraint firstItem="8dX-lb-vOy" firstAttribute="leading" secondItem="Mmv-ns-UVN" secondAttribute="leading" constant="25" id="lUF-LQ-jwy"/>
+                            <constraint firstItem="Mmv-ns-UVN" firstAttribute="trailing" secondItem="8dX-lb-vOy" secondAttribute="trailing" constant="25" id="ohE-yY-LV7"/>
                             <constraint firstItem="M0r-vG-o3P" firstAttribute="leading" secondItem="Mmv-ns-UVN" secondAttribute="leading" constant="25" id="sqE-cg-bb0"/>
                             <constraint firstItem="Mmv-ns-UVN" firstAttribute="trailing" secondItem="M0r-vG-o3P" secondAttribute="trailing" constant="25" id="t8W-Ob-KNj"/>
                             <constraint firstItem="nvb-pw-Md9" firstAttribute="leading" secondItem="Mmv-ns-UVN" secondAttribute="leading" constant="25" id="yzH-YF-Uv6"/>
