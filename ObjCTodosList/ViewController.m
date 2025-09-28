@@ -19,6 +19,12 @@
 	
 	self.navigationItem.title = @"ToDos-List";
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewTodo:)];
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteAllTodos)];
+}
+
+- (void)deleteAllTodos {
+	[todos removeAllObjects];
+	[self.tableView reloadData];
 }
 
 - (void)addNewTodo:(UIBarButtonItem *)sender {

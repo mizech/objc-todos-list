@@ -114,9 +114,11 @@
                     <connections>
                         <outlet property="textLabel" destination="EMH-bs-feI" id="PEh-T2-MtC"/>
                         <outlet property="titleLabel" destination="nvb-pw-Md9" id="Ay3-Aw-QCa"/>
+                        <segue destination="PGw-6m-jBV" kind="unwind" unwindAction="unwindToList:" id="JIn-Km-9ES"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlK-SY-V7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="PGw-6m-jBV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2032.824427480916" y="15.492957746478874"/>
         </scene>

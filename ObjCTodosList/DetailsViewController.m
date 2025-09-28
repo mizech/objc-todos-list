@@ -11,6 +11,10 @@
 	titleLabel.text = _todoTitle;
 	textLabel.text = _todoText;
 }
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+	NSLog(@"Testing, 1234 ...");
+}
 // Todo: Transfer updated values back to the list.
 - (IBAction)editButtonTouched:(id)sender {
 	UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"Edit Todo" message:@"Change title and text" preferredStyle:UIAlertControllerStyleAlert];
@@ -24,7 +28,7 @@
 		textField.text = _todoTitle;
 		textField.clearButtonMode = UITextFieldViewModeWhileEditing;
 	}];
-	UIAlertAction *action = [UIAlertAction actionWithTitle:@"Login" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+	UIAlertAction *action = [UIAlertAction actionWithTitle:@"Submit" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 		_todoTitle = alertVC.textFields[0].text;
 		_todoText = alertVC.textFields[1].text;
 		titleLabel.text = _todoTitle;
